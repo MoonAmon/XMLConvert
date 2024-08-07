@@ -2,18 +2,28 @@ package org.noom.xmlconvert;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class MainApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+    public void start(Stage stage) throws Exception {
+        // Load the FXML file
+        Parent root = FXMLLoader.load(getClass().getResource("/org/noom/xmlconvert/main-view.fxml"));
+
+        // Set the scene with the loaded FXML content
+        Scene scene = new Scene(root);
+
+        // Set the scene to the stage
         stage.setScene(scene);
+
+        stage.setTitle("XMLConverter");
+        stage.setResizable(false);
+
+        // Show the stage
         stage.show();
     }
 
