@@ -20,8 +20,13 @@ public class MainApplication extends Application {
         // Set the scene to the stage
         stage.setScene(scene);
 
+        // Set the title text windows
         stage.setTitle("XMLConverter");
         stage.setResizable(false);
+
+        // Set the position of the window
+        stage.setX(100);
+        stage.setY(100);
 
         // Show the stage
         stage.show();
