@@ -4,9 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 
 public class MainApplication extends Application {
     @Override
@@ -27,6 +27,9 @@ public class MainApplication extends Application {
         // Set the position of the window
         stage.setX(100);
         stage.setY(100);
+
+        // Add the icon to the stage 
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/icon.ico")));
 
         // Show the stage
         stage.show();
